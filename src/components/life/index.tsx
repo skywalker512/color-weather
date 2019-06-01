@@ -12,7 +12,7 @@ const Life: React.FC<IProps> = ({ indexs }) => {
   return (
     <div className={styles.content}>
       {indexs.map(item => (
-        <div className={styles.item}>
+        <div className={styles.item} key={item.title}>
           <div><WeatherIcon code={item.title}/></div>
           <div className={styles.level}>{item.level}</div>
           <div className={styles.title}>{item.title}</div>
