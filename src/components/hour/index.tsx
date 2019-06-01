@@ -9,8 +9,11 @@ interface IProps {
   hours: IWeatheHours[]
 }
 const Hour: React.FC<IProps> = ({ hours }) => {
+  const style = {
+    width: `${hours.length*16.8}%`
+  }
   return (
-    <div className={styles.content}>
+    <div className={styles.content} style={style}>
       {hours.map(item => (
         <div className={styles.item} key={item.hours}>
           <div className={styles.txttime}>{item.hours.replace(/时/, '')}:00</div>
