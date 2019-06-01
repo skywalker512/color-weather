@@ -2,7 +2,8 @@ import React from 'react';
 import { IWeatherData } from '@/interfaces/weather';
 
 import ReactEchartsCore from 'echarts-for-react/lib/core';
-import echarts from 'echarts'
+// @ts-ignore: 减少 echarts 的引用
+import echarts from 'echarts/lib/echarts'
 import 'echarts/lib/chart/line'
 import styles from './index.less'
 
