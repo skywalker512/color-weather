@@ -6,6 +6,8 @@ import { IWeather } from '../../interfaces/weather'
 import styles from './index.less'
 import NowWeather from '../hero/now';
 import TomorrowWeather from '../tomorrow/item';
+import Hour from '../hour';
+
 
 interface IProps {
   weathers: IWeather[],
@@ -26,6 +28,9 @@ const MainWeather: React.FC<IProps> = ({ loading, weathers }) => {
         <section className={styles.tomorrow}>
           <TomorrowWeather weatherData={weather.data[0]} text="今天" />
           <TomorrowWeather weatherData={weather.data[1]} text="明天" />
+        </section>
+        <section className={styles.hourssec}>
+          <Hour hours={weather.data[0].hours} />
         </section>
       </Fragment>
 

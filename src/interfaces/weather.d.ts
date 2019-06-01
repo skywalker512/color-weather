@@ -43,7 +43,7 @@ export interface IWeatherData {
   air_level: string,
   air_tips: string,
   alarm: IWeatheAlarm,
-  hours: IWeatheHours,
+  hours: IWeatheHours[],
   index: IWeatheIndex,
 }
 export interface IWeather {
