@@ -1,9 +1,11 @@
-import React from 'react'
-import LoactionCom from '../location'
+import React, { Fragment } from 'react'
+import LoactionCom from '../hero/location'
 
 import { IWeather } from '../../interfaces/weather'
 
 import styles from './index.less'
+import NowWeather from '../hero/now';
+import TomorrowWeather from '../tomorrow/item';
 
 interface IProps {
   weathers: IWeather[],
@@ -16,10 +18,17 @@ const MainWeather: React.FC<IProps> = ({ loading, weathers }) => {
     return <div>加载</div>
   } else {
     return (
-      <section className={styles.hero}>
-        <LoactionCom loaction={weather.basic.location} />
-        
-      </section>
+      <Fragment>
+        <section className={styles.hero}>
+          <LoactionCom loaction={weather.basic.location} />
+          <NowWeather now={weather.now} />
+        </section>
+        <section className={styles.tomorrow}>
+          <TomorrowWeather dailyForecast={weather.daily_forecast[0]} text="今天" />
+          <TomorrowWeather dailyForecast={weather.daily_forecast[1]} text="明天" />
+        </section>
+      </Fragment>
+
     )
   }
 }
