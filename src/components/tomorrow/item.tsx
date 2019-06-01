@@ -14,7 +14,7 @@ const TomorrowWeather: React.FC<IProps> = ({ weatherData, text }) => {
     <div className={styles.content}>
       <div className={styles.top} >
         <p className={styles.day}>{text}</p>
-        <p className={styles.temperature}>{weatherData.tem1}/{weatherData.tem2}</p>
+        <p className={styles.temperature}>{weatherData.tem1}/{weatherData.tem2}°</p>
       </div>
       <div className={styles.bottom}>
         <p className={styles.weather}>{weatherData.wea}</p>
