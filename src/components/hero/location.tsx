@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './location.less'
+import Link from 'umi/link';
 
 
 interface IProps {
@@ -9,10 +10,12 @@ interface IProps {
 const LoactionCom: React.FC<IProps> = (props) => {
   const { loaction } = props
   return (
-    <div className={styles.loction}>
-      <span className="icon-location"></span>
-      {loaction}
-    </div>
+    <Link to="/city/choose">
+      <div className={styles.loction}>
+        <span className="icon-location"></span>
+        {loaction}
+      </div>
+    </Link>
   )
 }
 

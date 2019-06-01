@@ -43,7 +43,6 @@ const MainWeather: React.FC<IProps> = ({ loading, weathers }) => {
           <Life indexs={weather.data[0].index}/>
         </section>
       </Fragment>
-
     )
   }
 }
