@@ -1,7 +1,5 @@
 import React from 'react'
 
-import styles from './item.less'
-
 interface IProps {
   code: string,
   width?: string,
