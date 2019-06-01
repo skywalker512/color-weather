@@ -44,7 +44,7 @@ export interface IWeatherData {
   air_tips: string,
   alarm: IWeatheAlarm,
   hours: IWeatheHours[],
-  index: IWeatheIndex,
+  index: IWeatheIndex[],
 }
 export interface IWeather {
   cityid: string,
