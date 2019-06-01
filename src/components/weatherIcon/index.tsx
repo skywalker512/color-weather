@@ -8,7 +8,7 @@ interface IProps {
   className?: any
 }
 const WeatherIcon: React.FC<IProps> = ({ code, width, className }) => {
-  const uri = require(`@/assets/img/weather/${code}.png`)
+  const uri = require(`@/assets/img/weather/${code}.svg`)
   const style = {
     height: '1.8em',
     width: '1.8em'
