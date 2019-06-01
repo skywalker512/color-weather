@@ -1,0 +1,46 @@
+.content {
+  text-align: center;
+  margin-top: .6em;
+  height: .8em;
+  width: 100%;
+  position: relative;
+}
+
+.text {
+  height: 0.8em;
+  line-height: 0.8em;
+  font-size: 0.8em;
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  animation-fill-mode: forwards;
+  animation-duration: .75s;
+  animation-name: wind-show;
+}
+.hide {
+  animation-name: wind-hide;
+}
+
+@keyframes wind-show {
+  from {
+    transform: translate3d(0,0.8em,0);
+    opacity: 0;
+  }
+  to {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+@keyframes wind-hide {
+  from {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(0,-0.8em,0);
+    opacity: 0;
+  }
+}
