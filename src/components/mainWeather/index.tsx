@@ -7,6 +7,7 @@ import styles from './index.less'
 import NowWeather from '../hero/now';
 import TomorrowWeather from '../tomorrow/item';
 import Hour from '../hour';
+import Charts from '../charts';
 
 
 interface IProps {
@@ -29,8 +30,11 @@ const MainWeather: React.FC<IProps> = ({ loading, weathers }) => {
           <TomorrowWeather weatherData={weather.data[0]} text="今天" />
           <TomorrowWeather weatherData={weather.data[1]} text="明天" />
         </section>
-        <section className={styles.hourssec}>
+        <section className={styles.touch}>
           <Hour hours={weather.data[0].hours} />
+        </section>
+        <section className={styles.touch}>
+          <Charts weatherDatas={weather.data} />
         </section>
       </Fragment>
 

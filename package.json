@@ -9,7 +9,10 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
+    "@types/echarts": "^4.1.9",
     "axios": "^0.19.0",
+    "echarts": "^4.2.1",
+    "echarts-for-react": "^2.0.15-beta.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
   },
