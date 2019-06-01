@@ -8,6 +8,7 @@ import NowWeather from '../hero/now';
 import TomorrowWeather from '../tomorrow/item';
 import Hour from '../hour';
 import Charts from '../charts';
+import Day from '../day';
 
 
 interface IProps {
@@ -34,6 +35,7 @@ const MainWeather: React.FC<IProps> = ({ loading, weathers }) => {
           <Hour hours={weather.data[0].hours} />
         </section>
         <section className={styles.touch}>
+          <Day weatherDatas={weather.data} />
           <Charts weatherDatas={weather.data} />
         </section>
       </Fragment>
