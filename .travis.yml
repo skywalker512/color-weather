@@ -24,4 +24,4 @@ script:
   - yarn build
 
 after_success:
-  - upx --auth $UPX_AUTH sync --delete --strong ./dist/build/h5
+  - upx --auth $UPX_AUTH sync --delete --strong ./dist
