@@ -7,7 +7,7 @@ interface IProps {
   width?: string
 }
 const WeatherIcon: React.FC<IProps> = ({ code, width }) => {
-  const uri = `https://cdn.heweather.com/cond_icon/${code}.png`
+  const uri = require(`@/assets/img/weather/${code}.png`)
   const style = {
     height: '1.8em',
     width: '1.8em'

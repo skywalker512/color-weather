@@ -1,17 +1,17 @@
 import React from 'react'
 
-import { IWeatherNow } from '../../interfaces/weather'
+import { IWeatherData } from '../../interfaces/weather'
 
 import styles from './now.less'
 
 interface IProps {
-  now: IWeatherNow
+  weatherData: IWeatherData
 }
-const NowWeather: React.FC<IProps> = ({ now }) => {
+const NowWeather: React.FC<IProps> = ({ weatherData }) => {
   return (
     <div className={styles.content}>
-      <div className={styles.temp}>{now.tmp}</div>
-      <div className={styles.cloud}>{now.cond_txt}</div>
+      <div className={styles.temp}>{weatherData.tem}</div>
+      <div className={styles.cloud}>{weatherData.wea}</div>
     </div>
   )
 }

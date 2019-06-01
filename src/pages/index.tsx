@@ -7,13 +7,13 @@ import MainWeather from '@/components/mainWeather';
 
 export default function index() {
   const [loading, setLoading] = useState(true)
-  const [weathers, setWeather] = useState<IWeather[]>([])
+  const [weather, setWeather] = useState<IWeather[]>([])
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get('./api/w')
-        setWeather(res.data.HeWeather6)
+        const res = await axios.get('./api/q')
+        setWeather([res.data])
         setLoading(false)
       } catch (error) {
         console.log(error)
@@ -23,7 +23,7 @@ export default function index() {
   }, [])
   return (
     <MainWeather
-      weathers={weathers}
+      weathers={weather}
       loading={loading}
     />
   )

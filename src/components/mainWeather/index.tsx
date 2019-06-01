@@ -20,12 +20,12 @@ const MainWeather: React.FC<IProps> = ({ loading, weathers }) => {
     return (
       <Fragment>
         <section className={styles.hero}>
-          <LoactionCom loaction={weather.basic.location} />
-          <NowWeather now={weather.now} />
+          <LoactionCom loaction={weather.city} />
+          <NowWeather weatherData={weather.data[0]} />
         </section>
         <section className={styles.tomorrow}>
-          <TomorrowWeather dailyForecast={weather.daily_forecast[0]} text="今天" />
-          <TomorrowWeather dailyForecast={weather.daily_forecast[1]} text="明天" />
+          <TomorrowWeather weatherData={weather.data[0]} text="今天" />
+          <TomorrowWeather weatherData={weather.data[1]} text="明天" />
         </section>
       </Fragment>
 

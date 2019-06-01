@@ -1,24 +1,24 @@
 import React from 'react'
 
-import { IWeatherDailyForecast } from '../../interfaces/weather'
+import { IWeatherData } from '../../interfaces/weather'
 
 import styles from './item.less'
 import WeatherIcon from '../weatherIcon';
 
 interface IProps {
-  dailyForecast: IWeatherDailyForecast,
+  weatherData: IWeatherData,
   text: string
 }
-const TomorrowWeather: React.FC<IProps> = ({ dailyForecast, text }) => {
+const TomorrowWeather: React.FC<IProps> = ({ weatherData, text }) => {
   return (
     <div className={styles.content}>
       <div className={styles.top} >
         <p className={styles.day}>{text}</p>
-        <p className={styles.temperature}>{dailyForecast.tmp_max}/{dailyForecast.tmp_min}°</p>
+        <p className={styles.temperature}>{weatherData.tem1}/{weatherData.tem2}</p>
       </div>
       <div className={styles.bottom}>
-        <p className={styles.weather}>{dailyForecast.cond_txt_d}转{dailyForecast.cond_txt_n}</p>
-        <WeatherIcon code={dailyForecast.cond_code_d} />
+        <p className={styles.weather}>{weatherData.wea}</p>
+        <WeatherIcon code={weatherData.wea_img} />
       </div>
     </div>
   )
