@@ -1,0 +1,23 @@
+.content {
+  height: calc(100% - 2em);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+}
+
+.temp {
+  font-size: 3em;
+  position: relative;
+  &::after {
+    content: "\B0";
+    position: absolute;
+    text-align: left;
+    top: 0;
+  }
+}
+
+.cloud {
+  font-size: 1.2em;
+}
