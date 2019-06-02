@@ -12,7 +12,7 @@ export default function index() {
   const [weather, setWeather] = useState<IWeather[]>([])
   // 因为现在比较简单就自己获取参数了（主要是没时间了）
   const { city } = queryString.parse(window.location.search)
-  let uri = 'https://www.tianqiapi.com/api/?appid=08936557&appsecret=Zy7tdYQ2&version=v9'
+  let uri = './api/q'
   if (city) uri += '&cityid=' + city
   // 就相当于 页面挂载到这里的生命周期函数
   useEffect(() => {
