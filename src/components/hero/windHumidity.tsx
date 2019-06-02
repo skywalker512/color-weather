@@ -9,10 +9,15 @@ interface IProps {
 }
 const WindHumidity: React.FC<IProps> = ({ weatherData }) => {
   const [humidityHide, sethumidityHide] = useState(true)
+  let timer: number
   useEffect(()=>{
-    window.setTimeout(()=>{
+    window.clearTimeout(timer)
+    timer = window.setTimeout(()=>{
       sethumidityHide(!humidityHide)
     }, 3000)
+    return () => {
+      window.clearTimeout(timer)
+    }
   })
   return (
     <div className={styles.content}>
