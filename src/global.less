@@ -56,6 +56,23 @@ a {
   text-decoration: none;
 }
 
+.fade-enter {
+  transform: translate3d(0,-100vh,0);
+}
+
+.fade-enter.fade-enter-active {
+  position: absolute;
+  transform: translate3d(0,0,0);
+  transition: transform 300ms ease-in;
+}
+.fade-exit {
+  transform: translate3d(0,0,0);
+}
+.fade-exit.fade-exit-active {
+  transform: translate3d(0,100vh,0);
+  transition: transform 300ms ease-in;
+}
+
 @font-face {
   font-family: 'icomoon';
   src:  url(./assets/fonts/icomoon.eot?pwvl15);

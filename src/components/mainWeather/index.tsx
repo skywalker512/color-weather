@@ -23,7 +23,7 @@ const MainWeather: React.FC<IProps> = ({ loading, weathers }) => {
     return <div>加载</div>
   } else {
     return (
-      <Fragment>
+      <div>
         <section className={styles.hero}>
           <LoactionCom loaction={weather.city} />
           <NowWeather weatherData={weather.data[0]} />
@@ -42,7 +42,7 @@ const MainWeather: React.FC<IProps> = ({ loading, weathers }) => {
         <section className={styles.life}>
           <Life indexs={weather.data[0].index}/>
         </section>
-      </Fragment>
+      </div>
     )
   }
 }
