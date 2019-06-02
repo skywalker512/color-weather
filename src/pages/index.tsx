@@ -2,15 +2,15 @@ import React, { useState, useEffect } from 'react'
 import queryString from 'query-string'
 
 import { IWeather } from '@/interfaces/weather';
-
+import { RouterTypes } from 'umi';
 import MainWeather from '@/components/mainWeather';
 
 
-export default function index() {
+const Index: React.FC<RouterTypes> = ({ location }) => {
   const [loading, setLoading] = useState(true)
   const [weather, setWeather] = useState<IWeather[]>([])
   // 因为现在比较简单就自己获取参数了（主要是没时间了）
-  const { city } = queryString.parse(window.location.search)
+  const { city } = queryString.parse(location.search)
   let uri = 'https://www.tianqiapi.com/api/?appid=08936557&appsecret=Zy7tdYQ2&version=v9'
   if (city) uri += '&cityid=' + city
 
@@ -40,3 +40,5 @@ export default function index() {
     />
   )
 }
+
+export default Index
