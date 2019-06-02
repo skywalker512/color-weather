@@ -11,7 +11,7 @@ export default function index() {
   const [weather, setWeather] = useState<IWeather[]>([])
   // 因为现在比较简单就自己获取参数了（主要是没时间了）
   const { city } = queryString.parse(window.location.search)
-  let uri = './api/q'
+  let uri = 'https://www.tianqiapi.com/api/?appid=08936557&appsecret=Zy7tdYQ2&version=v9'
   if (city) uri += '&cityid=' + city
 
   const abortController = new AbortController();
