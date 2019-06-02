@@ -10,7 +10,7 @@ interface IProps {
 }
 const Hour: React.FC<IProps> = ({ hours }) => {
   const style = {
-    width: `${hours.length*16.8}%`
+    width: `${hours.length*3.8}em`
   }
   return (
     <div className={styles.content} style={style}>
