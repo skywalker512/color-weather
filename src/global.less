@@ -57,18 +57,22 @@ a {
 }
 
 .fade-enter {
+  max-width: 500px;
   transform: translate3d(0,-100vh,0);
 }
 
 .fade-enter.fade-enter-active {
+  max-width: 500px;
   position: absolute;
   transform: translate3d(0,0,0);
   transition: transform 300ms ease-in;
 }
 .fade-exit {
+  max-width: 500px;
   transform: translate3d(0,0,0);
 }
 .fade-exit.fade-exit-active {
+  max-width: 500px;
   transform: translate3d(0,100vh,0);
   transition: transform 300ms ease-in;
 }
